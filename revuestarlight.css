@@ -91,7 +91,7 @@ body > .content::before {
 #header {
 	background-image: url(%%header-photo-2-1%%);
 	background-color: #160203;
-	background-position: center;
+	background-size: cover;
 	background-repeat: no-repeat;
 	font-weight: normal;
 	height: 305px;
