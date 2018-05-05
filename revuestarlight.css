@@ -1,6 +1,6 @@
 /** 
 *
-* Version 1.0.0
+* Version 1.0.1
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /r/LoveArrowShooto. 
@@ -80,6 +80,12 @@ body > .content::before {
 	right: 0;
 	height: 210px;
 
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
+	
 }
 
 /* CUSTOMIZE HEADER HERE */
@@ -153,6 +159,13 @@ body > .content::before {
 	background-color: white;
 	padding: 10px;
 	border-top-left-radius: 0px;
+	
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
+
 
 }
 
@@ -191,6 +204,12 @@ body > .content::before {
 	padding: 7px 5px 4px 5px;
 	text-transform: uppercase;
 	font-size: 12px;
+	
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
 
 }
 
@@ -850,6 +869,17 @@ textarea {
     background-repeat: no-repeat;
     background-size:contain;
     color: transparent;
+}
+
+/** Adjust CSS animations here **/
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 
