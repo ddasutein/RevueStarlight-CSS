@@ -1,6 +1,6 @@
 /** 
 *
-* Version 1.0.1
+* Version 1.0.2
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /r/LoveArrowShooto. 
@@ -715,6 +715,74 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 .sidecontentbox .collapse-button {
     visibility: hidden;
+}
+
+/* Change spoiler tag code */
+
+.spoiler-stamp {
+    background-color: #c82a2a;
+    color: #fff;
+}
+
+.linkflair-spoiler a.title:before {
+    color: teal!important;
+    text-shadow: 0 0 0px teal!important;
+    content: "Spoiler: ";
+}
+ 
+.linkflair-spoiler a.title {
+   color: transparent!important;
+   text-shadow: 0 0 7px teal!important;
+}
+.linkflair-spoiler a.title:visited {
+    color: teal!important;
+    text-shadow: 0 0 0px teal!important;
+    visibility: visible!important;
+}
+.linkflair-spoiler a.title:hover {
+    color: teal!important;
+    text-shadow: 0 0 0px teal!important;
+    visibility: visible!important;
+}
+ 
+.linkflair-spoiler:hover {
+    text-shadow: 0 0 0px teal;
+    visibility: visible!important;
+}
+ 
+.linkflair-spoiler .thumbnail img { display: none }
+ 
+.linkflair-spoiler .linkflairlabel {
+    background: transparent;
+    border-color: teal;
+    color: teal;
+    text-transform: uppercase;
+}
+ 
+.linkflair-spoiler .thumbnail {
+    background-image: url(%%test-image%%);
+    background-position: 0px 0px;
+    width: 70px;
+    height: 70px;
+}
+ 
+a[href|="#spoiler"],a[href|="#spoiler"],body:lang(bc) a[href|="#spoiler"],body:lang(bc) a[href|="#spoiler"] {
+    text-shadow: 0 0 7px teal;
+    color: transparent!important;
+    cursor: text;
+}
+ 
+a[href|="#spoiler"]:before,a[href|="#spoiler"]:before,body:lang(bc) a[href|="#spoiler"]:before,body:lang(bc) a[href|="#spoiler"]:before {
+    text-shadow: 0 0 0px teal;
+    color: teal;
+    content: "";
+    cursor: text;
+}
+ 
+a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|="#spoiler"] {
+    text-shadow: 0 0 0px teal;
+    color: teal;
+    cursor: text;
 }
 
 /* Replace ' readers' with something else*/
