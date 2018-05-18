@@ -1,6 +1,6 @@
 /** 
 *
-* Version 1.0.2
+* Version 1.0.4
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /r/LoveArrowShooto. 
@@ -70,15 +70,16 @@ body > .content::before {
 
 .pagename a {
 	background-image: url(%%revuestarlight-en-logo%%);
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	height: 235px;
+        width: 395px;
+        left: 50px;
+        right: 0px;
 	bottom: 0;
 	display: block;
 	font-size: 0px;
 	position: absolute;
-	left: 50px;
-	right: 0;
-	height: 210px;
 
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -391,6 +392,9 @@ body > .content::before {
 
 }
 
+.stickied {
+  border-left: 2px solid #27ae60;
+}
 
 .thing .title {
   outline: none;
