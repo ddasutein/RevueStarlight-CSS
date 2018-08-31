@@ -1,17 +1,33 @@
 /** 
 *
-* Version 1.0.4
+* Version 1.02.1
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
-* /r/LoveArrowShooto. 
+* /u/LoveArrowShooto. 
 *
 *
 **/
 
+/* HIDE THIS ANNOYING REDESIGN OPT IN LINK */
 
-* {    
+#sr-header-area .redesign-beta-optin {
+    background-color: #FF4500;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 18px;
+    padding-right: 20px;
+    position: relative;
+    text-align: center;
+    width: 138px;
+    display: none;
+}
 
-  font-family: -apple-system,BlinkMacSystemFont,"Roboto",Helvetica,Arial,"Lucida Grande",sans-serif;
+* { 
+
+font-family: -apple-system,BlinkMacSystemFont,"Roboto",Helvetica,Arial,"Lucida Grande",sans-serif;
 
 }
 
@@ -28,13 +44,13 @@ body > .content::before {
 	background-repeat: no-repeat;
 	bottom: 0px;
 	border: none;
-	content: "※ Revue Starlight TV Anime coming this Summer 2018 ※ See announcement post.";
+	content: "※ <Add your own announcement message here>";
 	color: #3c3c3c;
 	display: block;
 	font-weight: normal;
 	font-size: 15px;
 	margin-bottom: 0px !important;
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 110px 0px;
 	text-align: center;
 	width: 100%;
 	letter-spacing: 0.8px;
@@ -69,13 +85,13 @@ body > .content::before {
 }
 
 .pagename a {
-	background-image: url(%%revuestarlight-en-logo%%);
+	background-image: url();
 	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 235px;
-        width: 395px;
-        left: 50px;
-        right: 0px;
+    width: 395px;
+    left: 50px;
+    right: 0px;
 	bottom: 0;
 	display: block;
 	font-size: 0px;
@@ -86,7 +102,6 @@ body > .content::before {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: 0.7s;
-	
 }
 
 /* CUSTOMIZE HEADER HERE */
@@ -96,12 +111,13 @@ body > .content::before {
 }
 
 #header {
-	background-image: url(%%header-photo-2-1%%);
+	background-image: url();
 	background-color: #160203;
 	background-size: cover;
 	background-repeat: no-repeat;
+        box-shadow: 1px 1px 4px #898989;
 	font-weight: normal;
-	height: 305px;
+	height: 300px;
 	width: 100%;
 	border: none;
 }
@@ -160,13 +176,6 @@ body > .content::before {
 	background-color: white;
 	padding: 10px;
 	border-top-left-radius: 0px;
-	
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.7s;
-
 
 }
 
@@ -177,11 +186,18 @@ body > .content::before {
 
 #header-bottom-right {
 	background-color: transparent;
-	bottom: 2px;
+	bottom: 0px;
 	font-size: 10px;
 	font-weight: bold;
 	color: #c0392b;
 	text-transform: uppercase;
+
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
+
 }
 
 #header-bottom-left {
@@ -205,12 +221,6 @@ body > .content::before {
 	padding: 7px 5px 4px 5px;
 	text-transform: uppercase;
 	font-size: 12px;
-	
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.7s;
 
 }
 
@@ -224,8 +234,14 @@ body > .content::before {
 /* CUSTOMIZE TAB MENUS HERE */
 
 .tabmenu {
-	margin-top: 3px;
+	margin-top: -2px;
 	font-weight: bold;
+
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
 
 }
 
@@ -233,6 +249,7 @@ body > .content::before {
 	display: inline-block;
 	text-decoration: none;
 }
+
 
 .tabmenu li a::after {
 	content: ' ';
@@ -302,6 +319,36 @@ body > .content::before {
 	list-style: none;
 }
 
+.sidecontentbox a.helplink {
+    background-color: #C0392B;
+    border-radius: 15px;
+    box-shadow: 0px 2px 3px #c8c8c8;
+    color: white;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    margin-top: -3px;
+    margin-right: 14px;
+    margin-bottom: 16px;
+    margin-left: 15px;
+    padding: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 86%;
+}
+
+.sidebox .spacer {
+    display: none;
+}
+
+/* Adjust padding for Moderator names */
+
+.helplink ~ .content li {
+    margin: 5px 0;
+}
+
+
 .titlebox {
 	font-size: larger;
 	margin-left: 10px;
@@ -338,6 +385,12 @@ body > .content::before {
   color: #C0392B;
 }
 
+.comment .md {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
 #sr-header-area {
   background-color: white;
   white-space: nowrap;
@@ -354,24 +407,23 @@ body > .content::before {
   padding: 10px 0px 0px 0px;
 }
 
-.content .link {
+.link {
   background-color: white;
   box-shadow: 0 1px 5px 0 #dbdbdb;
-  margin-bottom: 1px;
-  padding: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 10px;
+  padding-left: 0px;
+  font-size: 10px;
+
+}
+
+.stickied {
+  border-bottom: 2px solid #acf8cc;
 }
 
 .thing, .title { 
   /* background-image: url(%%content-transparent-bg%%); */
-  border: none;
-
-}
-
-.link {
-  margin: 0;
-  margin-bottom: 8px;
-  padding-left: 0px;
-  font-size: 10px;
 
 }
 
@@ -392,9 +444,12 @@ body > .content::before {
 
 }
 
-.stickied {
-  border-left: 2px solid #27ae60;
+.entry .buttons li a {
+    color: #888;
+    font-weight: normal;
+    padding: 0 1px;
 }
+
 
 .thing .title {
   outline: none;
@@ -462,9 +517,9 @@ ul.tabmenu.formtab {
   margin-left: 15px;
   text-transform: uppercase;
   width: 90%;
-background-color: #5AC3D9;
-letter-spacing: 0.2px;
-border-radius: 15px;
+  background-color: #C0392B;
+  letter-spacing: 0.2px;
+  border-radius: 15px;
 }
 
 .tagline, .search-result-meta {
@@ -502,82 +557,12 @@ border-radius: 15px;
 
 .flair-userflair-claudine {
 
-	background: url(%%RevueStarlight-Userflairs%%);
+	background: url(%%RevueStarlight-Userflairs-v2%%);
 	width: 39px;
 	height: 41px;
-	background-position: -4px 247px;
-
-}
-
-.flair-userflair-futaba {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -54px 247px;
-
-}
-
-.flair-userflair-hikari {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -105px 247px;
-
-}
-
-.flair-userflair-junna {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -153px 247px;
-
-}
-
-.flair-userflair-kaoruko {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -204px 247px;
-
-}
-
-.flair-userflair-karen {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -255px 247px;
-
-}
-
-.flair-userflair-mahiru {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -4px 198px;
-
-}
-
-.flair-userflair-maya {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -55px 198px;
-
-}
-
-.flair-userflair-nana {
-
-	background: url(%%RevueStarlight-Userflairs%%);
-	width: 39px;
-	height: 41px;
-	background-position: -105px 198px;
+    background-position: -14px 736px;
+    border-radius: 50%;
+    border: 2px solid #fe9952 !important;
 
 }
 
@@ -599,45 +584,6 @@ border-radius: 15px;
 	padding-right: 15px;
 }
 
-.linkflair-LinkFlair-anime .linkflairlabel {
-	color: #000;
-	background-color: #ECE9E0;
-	border-radius: 15px;
-	padding-top: 4px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.linkflair-LinkFlair-information .linkflairlabel {
-	color: black;
-	background-color: #F9B81A;
-	border-radius: 15px;
-	padding-top: 4px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.linkflair-LinkFlair-seiyuu .linkflairlabel {
-	color: #FFF;
-	background-color: #D25383;
-	border-radius: 15px;
-	padding-top: 4px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.linkflair-LinkFlair-merchandise .linkflairlabel {
-	color: #000;
-	background-color: #ECE9E0;
-	border-radius: 15px;
-	padding-top: 4px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
 
 /* BUTTONS */
 
@@ -721,6 +667,13 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     visibility: hidden;
 }
 
+#suggested-reddits {
+    position: relative;
+    margin-top: 5px;
+    font-size: small;
+    display: none;
+}
+
 /* Change spoiler tag code */
 
 .spoiler-stamp {
@@ -789,12 +742,13 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
     cursor: text;
 }
 
+
 /* Replace ' readers' with something else*/
 .subscribers .word {
-	isplay: none;
+	display: none;
 }  
 .subscribers .number::after {
-	content: " people are waiting for the anime.";
+	content: " students at Seisho Music Academy";
 }
 
 /* Replace 'users here now' with something else*/
@@ -803,7 +757,7 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
 	display: none;
 }  
 .users-online .number::after {
-	content: " people practicing for the next play.";
+	content: " performers on stage";
 }
 
 
@@ -833,7 +787,7 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
     box-shadow: 0px 2px 3px #c8c8c8;
     margin: 5px 5px 10px 0;
     border: none;
-    background-color: #5AC3D9;
+    background-color: #C0392B;
     color: white;
     padding: 10px 15px;
     text-transform: uppercase;
@@ -912,36 +866,17 @@ textarea {
     cursor: pointer;
 }
 
-.side a[href="https://discordapp.com/invite/dZ93wsW"] {
+
+.side a[href="http://revuestarlight.com/"] {
     display: inline-block;
     height: 80px; 
     width: 100%;
-    background: url(%%RevueStarlight-Discord%%);
+    background: url(%%revue-official-website%%);
     background-repeat: no-repeat;
     background-size:contain;
     color: transparent;
 }
 
-.side a[href="https://hibiki-radio.jp/description/revuestarlight/detail"] {
-    display: inline-block;
-    height: 80px; 
-    width: 100%;
-    background: url(%%RevueStarlight-Hibiki-Radio%%);
-    background-repeat: no-repeat;
-    background-size:contain;
-    color: transparent;
-}
-
-
-.side a[href="https://www.reddit.com/r/RevueStarlight/"] {
-    display: inline-block;
-    height: 256px; 
-    width: 256px;
-    background: url(%%dgphG-1--400x400%%);
-    background-repeat: no-repeat;
-    background-size:contain;
-    color: transparent;
-}
 
 /** Adjust CSS animations here **/
 
@@ -952,6 +887,15 @@ textarea {
 	100% {
 		opacity: 1;
 	}
+}
+
+.md a {
+    color: #CA424F;
+}
+
+a.author {
+    margin-right: 0.5em;
+    color: #575757;
 }
 
 
@@ -976,9 +920,75 @@ textarea {
 *
 **/
 
+:lang(nm) .thumbnail.self {
+    background-image: url(%%kirin%%);
+    background-position: 0px 4px;
+    background-repeat: no-repeat;
+    background-size: 185%;
+    height: 58px;
+}
+
 :lang(nm) body {
   background: url(%%background%%); 
   background-color: #eee;
   font-size: 12px;
 
+}
+
+
+:lang(nm) body > .content::before {
+	color: white;
+} 
+
+:lang(nm) .content {
+    background-color: #161616;
+}
+
+:lang(nm) .side {
+    background-color: #202020;
+    box-shadow: none;
+    color: white;
+}
+
+
+:lang(nm) .link {
+    background-color: #202020;
+    box-shadow: none;
+    color: white;
+}
+
+:lang(nm) .side .md {
+    font-size: 0.9230769230769231em;
+    color: white;
+}
+
+:lang(nm) .md a {
+    color: #d4920c;
+    text-decoration: none;
+}
+
+:lang(nm) .tagline a, .search-result-meta a {
+    color: #d4920c;
+    text-decoration: none;
+}
+
+
+:lang(nm) .morelink {
+    background: none;
+}
+
+:lang(nm) .stickied {
+  border-bottom: 2px solid #18501d;
+}
+
+:lang(nm) .commentarea .md {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+:lang(nm) .commentarea .thing {
+    background-color: #161616;
+    margin-bottom: 1px;
+    padding: 13px;
 }
