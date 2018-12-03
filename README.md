@@ -1,7 +1,18 @@
-## Shoujo Kageki Revue Starlight
+## Welcome to Shoujo Kageki Revue Starlight
 
 This is a subreddit theme designed for /r/RevueStarlight by /u/LoveArrowShooto.
 
-Note: I will not upload the assets as they are subjected to copyright. Feel free to take the existing code and apply them to your subreddit. 
+Please note: Certain assets such as user flairs and header images are not included in this repository. 
 
-Link to subreddit -> https://www.reddit.com/r/RevueStarlight
+[Link to subreddit](https://www.reddit.com/r/RevueStarlight)
+
+## How to contribute?
+
+* Fork and clone the RevueStarlight-CSS repository.
+
+* Make your changes on the revuestarlight.css file.
+
+* Create your own private subreddit for testing.
+
+* When submitting pull requests, be sure to explain your changes in detail and as much as possible, take a screenshot.
+
