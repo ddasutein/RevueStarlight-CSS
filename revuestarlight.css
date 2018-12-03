@@ -1,12 +1,13 @@
 /** 
 *
-* Version 1.02.1
+* Version 1.10
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
 *
 *
 **/
+
 
 /* HIDE THIS ANNOYING REDESIGN OPT IN LINK */
 
@@ -25,6 +26,14 @@
     display: none;
 }
 
+.thumbnail.self {
+    background-image: url(%%kirin%%);
+    background-position: -65px -50px;
+    background-repeat: no-repeat;
+    background-size: 185%;
+    height: 58px;
+}
+
 * { 
 
 font-family: -apple-system,BlinkMacSystemFont,"Roboto",Helvetica,Arial,"Lucida Grande",sans-serif;
@@ -38,19 +47,20 @@ body {
 
 }
 
+
 /* CHANGE ANNOUNCEMENT MESSAGE HERE */
 
 body > .content::before {
 	background-repeat: no-repeat;
 	bottom: 0px;
 	border: none;
-	content: "※ <Add your own announcement message here>";
+	content: "Welcome to /r/Revue Starlight. Don't forget to FLAIR your posts.";
 	color: #3c3c3c;
 	display: block;
 	font-weight: normal;
 	font-size: 15px;
 	margin-bottom: 0px !important;
-	padding: 0px 0px 110px 0px;
+	padding: 0px 0px 10px 0px;
 	text-align: center;
 	width: 100%;
 	letter-spacing: 0.8px;
@@ -62,9 +72,10 @@ body > .content::before {
 .titlebox .usertext .md > h3 {
 	background-color: #C0392B;
 	color: white;
+	margin-left: -10px;
 	padding: 5px 10px;
-	width: 260px;
-	margin-left: 1px;
+        text-align: center;
+	width: 280px;
 }
 
 .titlebox h1 {
@@ -85,13 +96,13 @@ body > .content::before {
 }
 
 .pagename a {
-	background-image: url();
+	background-image: url(%%revuestarlight-en-logo%%);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 235px;
-    width: 395px;
-    left: 50px;
-    right: 0px;
+        width: 395px;
+        left: 50px;
+        right: 0px;
 	bottom: 0;
 	display: block;
 	font-size: 0px;
@@ -111,7 +122,7 @@ body > .content::before {
 }
 
 #header {
-	background-image: url();
+        background-image: url(%%revuestarlight-header%%);
 	background-color: #160203;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -120,6 +131,13 @@ body > .content::before {
 	height: 300px;
 	width: 100%;
 	border: none;
+}
+
+#sr-header-area .width-clip {
+    font-size: 10px;
+    width: 95%;
+    margin-left: 15px;
+    text-transform: initial;
 }
 
 #sr-header-area .drop-choices.srdrop {
@@ -358,7 +376,7 @@ body > .content::before {
 
 .md-container-small .md .-text, .side .md .-text, .md-container-small .md p, .side .md p, .md-container-small .md pre > code, .side .md pre > code, .md-container-small .md th, .side .md th, .md-container-small .md td, .side .md td, .md-container-small .md li, .side .md li {
     font-size: 1em;
-    line-height: 1.25em;
+    line-height: 1.50em;
     margin-left: 2px;
 }
 
@@ -419,7 +437,7 @@ body > .content::before {
 }
 
 .stickied {
-  border-bottom: 2px solid #acf8cc;
+  /* border-bottom: 2px solid #acf8cc; */
 }
 
 .thing, .title { 
@@ -552,36 +570,34 @@ ul.tabmenu.formtab {
 	padding: 5px;
 }
 
-
-/** USER FLAIRS **/
-
-.flair-userflair-claudine {
-
-	background: url(%%RevueStarlight-Userflairs-v2%%);
-	width: 39px;
-	height: 41px;
-    background-position: -14px 736px;
-    border-radius: 50%;
-    border: 2px solid #fe9952 !important;
-
+.flairselector.drop-choices.active {
+    border: none;
+    display: block;
 }
 
-
-/** LINK FLAIRS **/
-
-.flair, .linkflairlabel {
-	border: none;
-	vertical-align: middle;
+.flairselector {
+    border: none;
+    box-shadow: 0px 0px 25px #ccc;
+    font-size: x-small;
+    position: absolute;
+    width: 400px;
 }
 
-.linkflair-LinkFlair-livestream .linkflairlabel {
-	color: #fff;
-	background-color: #d63031;
-	border-radius: 15px;
-	padding-top: 4px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
+.flairselector h2 {
+    background: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.flairselector form {
+    border-top: solid 1px #ececec;
+    clear: both;
+    display: block;
+    padding-top: 5px;
+    text-align: center;
 }
 
 
@@ -597,30 +613,65 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 /* Upvote AND Downvote buttons */
 
-.arrow.up {
+/* .thing .midcol { width: 70px !important; } */
 
-	background-image: url(%%arrow-up-reddit-not-selected%%);
+.arrow.up {
+	background-image: url(%%upvote-not-selected%%);
+	/* background-image: url(%%upvote-animation%%);
+        width: 45px;
+        height: 26px;   */
 	background-position: 0px 0px; 
 
 }
 
-.arrow.upmod {
+@-webkit-keyframes arrow {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -377px;
+  }
+}
 
-	background-image: url(%%arrow-up-reddit%%);
+.arrow.upmod {
+	background-image: url(%%upvote-selected%%);
 	background-position: 0px 0px; 
 
+	/* background-image: url(%%upvote-animation%%);
+        width: 44px;
+        height: 25px;
+        animation: arrow 0.4s steps(14);
+        animation-fill-mode: forwards; */
 }
 
 .arrow.down {
 
-	background-image: url(%%arrow-down-reddit%%);
+	background-image: url(%%downvote-not-selected%%);
 	background-position: 0px 0px; 
 
 }
 
+.arrow.down:hover:before {
+    content: "Please don't downvote because you disagree";
+    background-color: #2d3436;
+    color: #FFF;
+    border: 1px solid #dfe6e9;
+    box-shadow: 1px 1px 25px #dfe6e9;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    width: 102px;
+    padding: 15px;
+    margin-left: 5px;
+    margin-top: 5px
+    }
+
 .arrow.downmod {
 
-	background-image: url(%%arrow-down-selected%%);
+	background-image: url(%%downvote-selected%%);
 	background-position: 0px 0px; 
 
 }
@@ -628,11 +679,35 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /* FOOTER */
 
 .footer-parent {
-	padding-top: 542px;
+	padding-top: 650px;
 	background-image: url(%%CastCharacters--bg%%);
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position: center 0px;
+}
+
+
+.footer {
+
+    color: gray;
+    padding: 15px;
+    margin: 15px auto;
+    border: 1px solid #F0F0F0;
+    display: flex;
+    display: -webkit-flex;
+    max-width: 600px;
+    background-color: #9e9e9e1a;
+    font-size: 13px;
+    text-transform: capitalize;
+
+}
+
+.flat-vert.title {
+    color: #3f3f3f;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
 }
 
 
@@ -751,6 +826,14 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
 	content: " students at Seisho Music Academy";
 }
 
+.subscribers {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    padding-right: 50px;
+}
+
 /* Replace 'users here now' with something else*/
 
 .users-online .word {
@@ -758,6 +841,13 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
 }  
 .users-online .number::after {
 	content: " performers on stage";
+}
+
+.users-online {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 5px;
+    font-size: 13px;
 }
 
 
@@ -866,17 +956,25 @@ textarea {
     cursor: pointer;
 }
 
-
-.side a[href="http://revuestarlight.com/"] {
-    display: inline-block;
-    height: 80px; 
-    width: 100%;
-    background: url(%%revue-official-website%%);
-    background-repeat: no-repeat;
-    background-size:contain;
-    color: transparent;
+.nav-buttons {
+    padding: 8px;
+    padding-top: 8px;
 }
 
+.nextprev, .next-suggestions {
+    color: gray;
+    font-size: small;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.nextprev a, .next-suggestions a {
+    padding: 3px 9px;
+    font-size: 12px;
+    border: 1px solid #444;
+    border-radius: 35px;
+    color: #575656;
+}
 
 /** Adjust CSS animations here **/
 
@@ -898,6 +996,36 @@ a.author {
     color: #575757;
 }
 
+/** Moderator page and backend **/
+
+:lang(nm) ul.image-preview-list .description {
+    color: white;
+}
+
+:lang(nm) ul.image-preview-list .description pre {
+    display: inline;
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.linefield {
+    width: 514px;
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+.linefield .title {
+    text-transform: capitalize;
+}
+
+.linefield.mobile {
+    width: 512px;
+    background-color: #FFF;
+    border: none;
+}
 
 /** Toggle between Light and Dark theme **/
 
@@ -935,6 +1063,52 @@ a.author {
 
 }
 
+:lang(nm) #header {
+  background-image: url(%%Header-photo-hikari-karen%%);
+  box-shadow: 1px 1px 4px #000;
+}
+
+:lang(nm) #sr-header-area {
+  background-color: #121212;
+}
+
+:lang(nm) #sr-more-link {
+    background-color: #121212;
+}
+
+:lang(nm) #sr-header-area .drop-choices.srdrop {
+    background-color: #121212;
+}
+
+:lang(nm) .dropdown.srdrop .selected {
+    color: #bababa;
+}
+
+:lang(nm) .dropdown.srdrop .selected:before {
+    color: #bababa;
+}
+
+:lang(nm) .usertext-edit textarea {
+    background-color: #262626;
+    border: none;
+    color: #bababa;
+}
+
+:lang(nm) #header a {
+    color: #bababa;
+}
+
+:lang(nm) .morelink a {
+    box-shadow: 0px 2px 3px #000;
+}
+
+:lang(nm) .side .md table * {
+    border-color: #343434;
+}
+
+:lang(nm) .sidecontentbox a.helplink {
+    box-shadow: 0px 2px 3px #000;
+}
 
 :lang(nm) body > .content::before {
 	color: white;
@@ -947,9 +1121,12 @@ a.author {
 :lang(nm) .side {
     background-color: #202020;
     box-shadow: none;
-    color: white;
+    color: #bababa;
 }
 
+:lang(nm) .sidecontentbox .title h1 {
+    color: #bababa;
+}
 
 :lang(nm) .link {
     background-color: #202020;
@@ -959,7 +1136,7 @@ a.author {
 
 :lang(nm) .side .md {
     font-size: 0.9230769230769231em;
-    color: white;
+    color: #bababa;
 }
 
 :lang(nm) .md a {
@@ -977,10 +1154,6 @@ a.author {
     background: none;
 }
 
-:lang(nm) .stickied {
-  border-bottom: 2px solid #18501d;
-}
-
 :lang(nm) .commentarea .md {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -991,4 +1164,9 @@ a.author {
     background-color: #161616;
     margin-bottom: 1px;
     padding: 13px;
+}
+
+:lang(nm) .flairselector {
+    background-color: #323232;
+    box-shadow: 0px 0px 25px #0e0e0e;
 }
