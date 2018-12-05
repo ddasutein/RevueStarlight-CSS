@@ -10,7 +10,7 @@ Please note: Certain assets such as user flairs and header images are not includ
 
 * Fork and clone the RevueStarlight-CSS repository.
 
-* Make your changes on the revuestarlight.css file.
+* Make your changes in `src/revuestarlight.css` 
 
 * Create your own private subreddit for testing.
 
