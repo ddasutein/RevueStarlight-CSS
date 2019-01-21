@@ -1,6 +1,6 @@
 /** 
 *
-* Version 1.10
+* Version 1.12
 *
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
@@ -36,7 +36,7 @@
 
 * { 
 
-font-family: -apple-system,BlinkMacSystemFont,"Roboto",Helvetica,Arial,"Lucida Grande",sans-serif;
+font-family: Arial;
 
 }
 
@@ -54,7 +54,7 @@ body > .content::before {
 	background-repeat: no-repeat;
 	bottom: 0px;
 	border: none;
-	content: "Welcome to /r/Revue Starlight. Don't forget to FLAIR your posts.";
+	content: "Welcome to /r/RevueStarlight. Please don't forget to FLAIR your post.";
 	color: #3c3c3c;
 	display: block;
 	font-weight: normal;
@@ -122,7 +122,8 @@ body > .content::before {
 }
 
 #header {
-        background-image: url(%%revuestarlight-header%%);
+        background-image: url(%%desktop-starry-sky%%);
+        /* background-image: url(%%revuestarlight-header%%); */
 	background-color: #160203;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -290,6 +291,40 @@ body > .content::before {
     border-bottom: 4px solid white;
     font-weight: bold;
     color: black;
+
+}
+
+/* SUBMIT PAGE */
+
+.submit.content {
+    width: 520px;
+    margin: auto;
+}
+
+.formtabs-content {
+    border-top: 4px solid #c0392b;
+}
+
+.tabmenu.formtab a {
+    border: none !important;
+    border-bottom: none;
+    font-size: 20px !important;
+    font-weight: normal;
+    color: black;
+    outline: none;
+    margin-left: -10px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: bottom;
+    width: 47.3%;
+}
+
+.tabmenu.formtab .selected a {
+    background-color: #c0392b;
+}
+
+.tabmenu li a {
+  background-color: #ecf0f1;
 
 }
 
@@ -493,25 +528,14 @@ a {
 
 .roundfield {
   background-color: white;
-  box-shadow: 0px 0px 5px #95a5a6;
-}
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
 
-.formtabs-content {
-  border-top: 4px solid #f44274;
 }
 
 ul.tabmenu.formtab {
 
-
-}
-
-.tabmenu.formtab .selected a {
-  background-color: #2c3e50;
-
-}
-
-.tabmenu li a {
-  background-color: #ecf0f1;
 
 }
 
@@ -600,6 +624,318 @@ ul.tabmenu.formtab {
     text-align: center;
 }
 
+
+/** USER FLAIRS **/
+
+.flair-userflair-claudine {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -14px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #fe9952 !important; */
+
+}
+
+.flair-userflair-futaba {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -98px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #8a64a9 !important; */
+
+}
+
+.flair-userflair-hikari {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -189px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #447fd8 !important; */
+
+}
+
+.flair-userflair-junna {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -274px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #99ccef !important; */
+
+}
+
+.flair-userflair-kaoruko {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -359px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #e08797 !important; */
+
+}
+
+.flair-userflair-karen {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+	background-position: -441px 732px;
+        border-radius: 50%;
+        /* border: 2px solid #fb5155 !important; */
+
+}
+
+.flair-userflair-mahiru {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -525px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #61bf99 !important; */
+
+}
+
+.flair-userflair-maya {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -615px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #cbc6cc !important; */
+
+}
+
+.flair-userflair-nana {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -694px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #fee199 !important; */
+
+}
+
+.flair-userflair-hina {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -273px 650px;
+        border-radius: 50%;
+
+}
+
+
+.flair-userflair-ayasa {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -355px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-mimorin {
+
+	background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -189px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-aiai {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -20px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-haruki {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -528px 650px;
+        border-radius: 50%;
+
+}
+
+
+.flair-userflair-koyama {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -442px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-maho {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -611px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-teru {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -103px 650px;
+        border-radius: 50%;
+
+}
+
+.flair-userflair-moeka {
+        background: url(%%RevueStarlight-Userflairs-v2%%);
+	width: 39px;
+	height: 41px;
+        background-position: -693px 650px;
+        border-radius: 50%;
+
+}
+
+/** MOD EXCLUSIVE FLAIRS **/
+
+.flair-modflair-mimokoyama {
+
+	background: url(%%RevueStarlight-modflairs%%);
+	width: 39px;
+	height: 41px;
+        background-position: -20px 736px;
+        border-radius: 50%;
+        /* border: 2px solid #fe9952 !important; */
+
+}
+
+/** LINK FLAIRS **/
+
+.flair, .linkflairlabel {
+	border: none;
+	vertical-align: middle;
+}
+
+.linkflair-LinkFlair-livestream .linkflairlabel {
+	color: #fff;
+	background-color: #d63031;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-general .linkflairlabel {
+	color: #000;
+	background-color: #f6f6f6;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-information .linkflairlabel {
+	color: black;
+	background-color: #F9B81A;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-seiyuu .linkflairlabel {
+	color: #FFF;
+	background-color: #D25383;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-merchandise .linkflairlabel {
+	color: #000;
+	background-color: #ECE9E0;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-fanart .linkflairlabel {
+	color: #fff;
+	background-color: #9183B2;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-music .linkflairlabel {
+	color: #000;
+	background-color: #B9CB65;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+}
+
+.linkflair-LinkFlair-relive-luck .linkflairlabel {
+	color: #000;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+background: #d6f9ff; /* Old browsers */
+background: -moz-linear-gradient(45deg, #d6f9ff 0%, #9ee8fa 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #d6f9ff 0%,#9ee8fa 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #d6f9ff 0%,#9ee8fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.linkflair-LinkFlair-relive-general .linkflairlabel {
+	color: #000;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+        font-weight: bold;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 /* BUTTONS */
 
@@ -956,6 +1292,75 @@ textarea {
     cursor: pointer;
 }
 
+.side a[href="https://discordapp.com/invite/dZ93wsW"] {
+    display: inline-block;
+    height: 80px; 
+    width: 100%;
+    background: url(%%RevueStarlight-Discord%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+}
+
+.side a[href="https://hibiki-radio.jp/description/revuestarlight/detail"] {
+    display: inline-block;
+    height: 80px; 
+    width: 100%;
+    background: url(%%RevueStarlight-Hibiki-Radio%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+}
+
+/*.side a[href="https://www.hidive.com/tv/revue-starlight"] {
+    display: inline-block;
+    height: 80px; 
+    width: 100%;
+    background: url(%%revue-anime-hidive%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+    position: absolute;
+    top: 375px;
+    bottom: 19px;
+    right: -170px;
+    left: 20px;
+    width: 280px;
+    box-shadow: 1px 3px 5px #c8c8c8;
+} */
+
+
+.side a[href="http://revuestarlight.com/"] {
+    display: inline-block;
+    height: 80px; 
+    width: 100%;
+    background: url(%%revue-official-website%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+}
+
+.side a[href="https://www.reddit.com/r/RevueStarlight/wiki/rules"]{
+    position: absolute;
+    top: 315px;
+    left: 10px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    color: #4b4e58;
+}
+
+
+.side a[href="https://www.reddit.com/r/RevueStarlight/"] {
+    display: inline-block;
+    height: 396px; 
+    width: 256px;
+    background: url(%%revuestarlight-keyvisual%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+}
+
 .nav-buttons {
     padding: 8px;
     padding-top: 8px;
@@ -1064,7 +1469,7 @@ a.author {
 }
 
 :lang(nm) #header {
-  background-image: url(%%Header-photo-hikari-karen%%);
+  /* background-image: url(%%Header-photo-hikari-karen%%); */
   box-shadow: 1px 1px 4px #000;
 }
 
@@ -1169,4 +1574,52 @@ a.author {
 :lang(nm) .flairselector {
     background-color: #323232;
     box-shadow: 0px 0px 25px #0e0e0e;
+}
+
+:lang(nm) .roundfield {
+    background-color: #323232;
+    box-shadow: 0px 0px 5px #09090980;
+}
+
+:lang(kh) #header {
+	background-image: url(%%Header-photo-hikari-karen%%);
+        box-shadow: 1px 1px 4px #898989;
+}
+
+
+:lang(hj) #header {
+	background-image: url(%%desktop-junna%%);
+        box-shadow: 1px 1px 4px #898989;
+}
+
+:lang(dn) #header {
+	background-image: url(%%desktop-banana%%);
+        box-shadow: 1px 1px 4px #898989;
+}
+
+:lang(bt) .thing .midcol { width: 70px !important; }
+
+:lang(bt) .arrow.up {
+	background-image: url(%%upvote-animation%%);
+        width: 45px;
+        height: 26px;
+	background-position: 0px 0px; 
+
+}
+
+:lang(bt) .arrow.upmod {
+        background-image: url(%%upvote-animation%%);
+        width: 44px;
+        height: 25px;
+        animation: arrow 0.4s steps(14);
+        animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes arrow {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -377px;
+  }
 }
