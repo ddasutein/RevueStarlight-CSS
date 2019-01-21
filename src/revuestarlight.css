@@ -1,30 +1,45 @@
-/** 
-*
-* Version 1.10
-*
+* {  font-family: Arial; }
+
+body { background-color: #eee; font-size: 12px; }
+
+/** VERSION 1.12
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
-*
-*
 **/
 
+/* CHANGE SUBREDDIT HEADER HERE */
 
-/* HIDE THIS ANNOYING REDESIGN OPT IN LINK */
-
-#sr-header-area .redesign-beta-optin {
-    background-color: #FF4500;
-    color: #FFFFFF;
-    cursor: pointer;
-    float: left;
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 18px;
-    padding-right: 20px;
-    position: relative;
-    text-align: center;
-    width: 138px;
-    display: none;
+#header {
+    background-image: url(%%desktop-starry-sky%%);
+	background-color: #160203;
+	background-size: cover;
+	background-repeat: no-repeat;
+    box-shadow: 1px 1px 4px #898989;
+	font-weight: normal;
+	height: 300px;
+	width: 100%;
+	border: none;
 }
+
+/* CHANGE ANNOUNCEMENT MESSAGE HERE */
+
+body > .content::before {
+    content: "Welcome to /r/RevueStarlight. Please don't forget to FLAIR your post.";
+	background-repeat: no-repeat;
+	bottom: 0px;
+	border: none;
+	color: #3c3c3c;
+	display: block;
+	font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+	margin-bottom: 0px !important;
+	padding: 0px 0px 10px 0px;
+	text-align: center;
+	width: 100%;
+} 
+
+/* CUSTOMIZE SUBREDDIT CONTENT */
 
 .thumbnail.self {
     background-image: url(%%kirin%%);
@@ -34,37 +49,139 @@
     height: 58px;
 }
 
-* { 
+.content { background-color: white; margin: 10px 315px 0px 10px; padding: 10px 0px 0px 0px; }
 
-font-family: -apple-system,BlinkMacSystemFont,"Roboto",Helvetica,Arial,"Lucida Grande",sans-serif;
+.commentarea .thing { background-color: white; margin-bottom: 1px; padding: 13px; }
+
+.comment .author { color: #C0392B; font-weight: bold; font-size: 12px;  }
+
+.comment .md { color: black; margin-top: 5px; margin-bottom: 5px; }
+
+.morelink { background-color: none; background-image: none; }
+
+.morelink:hover, .mlh { border-color: none; background-image: none;
+}
+
+#sr-header-area {
+    background-color: white;
+    white-space: nowrap;
+    border-bottom: 0px solid gray;
+    font-size: 10px;
+    line-height: 18px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.link {
+    background-color: white;
+    box-shadow: 0 1px 5px 0 #dbdbdb;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 10px;
+    padding-left: 0px;
+    font-size: 10px;
 
 }
 
-body {
-  /* background: url(%%background%%); */
-  background-color: #eee;
+.stickied { /* border-bottom: 2px solid #acf8cc; */ }
+
+.thing, .title { /* background-image: url(%%content-transparent-bg%%); */ }
+
+.link .title { font-size: large; font-weight: normal; margin-bottom: 1px; }
+
+.link .title:visited { color: #95a5a6; }
+
+.link .usertext-body .md { border: 1px solid #e0e0e0; }
+
+.entry .buttons li a {
+    color: #888;
+    font-weight: normal;
+    padding: 0 1px;
+}
+
+
+.thing .title {
+    outline: none;
+    margin-right: .4em;
+    padding: 0px;
+    overflow: hidden;
+    unicode-bidi: isolate;
+    color: #4b4b4b;
+
+}
+
+.thing.stickied.link a.title { color: #27ae60; }
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #369;
+
+}
+
+.roundfield {
+  background-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.infobar { background-color: transparent; border: none; }
+
+
+.morelink { border: none; }
+
+.morelink a {
+  /* background-image: url(%%submit-btn%%); */
+  box-shadow: 0px 2px 3px #c8c8c8;
+  color: white;
   font-size: 12px;
-
+  font-weight: normal;
+  margin-left: 15px;
+  text-transform: uppercase;
+  width: 90%;
+  background-color: #C0392B;
+  letter-spacing: 0.2px;
+  border-radius: 15px;
 }
 
+.tagline, .search-result-meta {
+    color: #888;
+    font-size: 12px;
+    padding: 5px;
+}
 
-/* CHANGE ANNOUNCEMENT MESSAGE HERE */
+.tagline .stickied-tagline, .search-result-meta .stickied-tagline {
+    color: #FFF;
+    background-color: #27ae60;
+    border-radius: 15px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+}
 
-body > .content::before {
-	background-repeat: no-repeat;
-	bottom: 0px;
-	border: none;
-	content: "Welcome to /r/Revue Starlight. Don't forget to FLAIR your posts.";
-	color: #3c3c3c;
-	display: block;
-	font-weight: normal;
-	font-size: 15px;
-	margin-bottom: 0px !important;
-	padding: 0px 0px 10px 0px;
-	text-align: center;
-	width: 100%;
-	letter-spacing: 0.8px;
-} 
+.link .flat-list {
+    display: block;
+    padding: 1px 0;
+    text-transform: uppercase;
+}
+  
+.commentarea .menuarea {
+    border: none;
+    margin: 0 310px 10px 10px;
+    padding: 0;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+textarea {
+    background-color: #FCFBF6;
+    color: #161616;
+    border: 1px solid #CCC;
+}
 
 
 /* CUSTOMIZE SUBREDDIT DESCRIPTION HERE */
@@ -74,7 +191,7 @@ body > .content::before {
 	color: white;
 	margin-left: -10px;
 	padding: 5px 10px;
-        text-align: center;
+    text-align: center;
 	width: 280px;
 }
 
@@ -83,7 +200,6 @@ body > .content::before {
 	margin-bottom: 10px;
 	font-weight: normal;
 	text-align: center;
-
 }
 
 .titlebox form.toggle, .leavemoderator {
@@ -100,14 +216,14 @@ body > .content::before {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 235px;
-        width: 395px;
-        left: 50px;
-        right: 0px;
+    width: 395px;
+    left: 50px;
+    right: 0px;
 	bottom: 0;
 	display: block;
 	font-size: 0px;
-	position: absolute;
-
+    position: absolute;
+    
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
@@ -119,18 +235,6 @@ body > .content::before {
 
 #header-bottom-left .default-header {
 	visibility: hidden;
-}
-
-#header {
-        background-image: url(%%revuestarlight-header%%);
-	background-color: #160203;
-	background-size: cover;
-	background-repeat: no-repeat;
-        box-shadow: 1px 1px 4px #898989;
-	font-weight: normal;
-	height: 300px;
-	width: 100%;
-	border: none;
 }
 
 #sr-header-area .width-clip {
@@ -187,7 +291,6 @@ body > .content::before {
 #header a {
 	color: #161616;
 }
-
 
 #header-bottom-right {
 	position: absolute;
@@ -293,6 +396,40 @@ body > .content::before {
 
 }
 
+/* CUSTOMIZE SUBMIT PAGE HERE */
+
+.submit.content {
+    width: 520px;
+    margin: auto;
+}
+
+.formtabs-content {
+    border-top: 4px solid #c0392b;
+}
+
+.tabmenu.formtab a {
+    border: none !important;
+    border-bottom: none;
+    font-size: 20px !important;
+    font-weight: normal;
+    color: black;
+    outline: none;
+    margin-left: -10px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: bottom;
+    width: 47.3%;
+}
+
+.tabmenu.formtab .selected a {
+    background-color: #c0392b;
+}
+
+.tabmenu li a {
+  background-color: #ecf0f1;
+
+}
+
 /* CUSTOMIZE SIDE BOX HERE */
 
 #search input[type="text"]{
@@ -356,23 +493,13 @@ body > .content::before {
     width: 86%;
 }
 
-.sidebox .spacer {
-    display: none;
-}
+.sidebox .spacer { display: none; }
 
-/* Adjust padding for Moderator names */
+/* ADJUST PADDING FOR MODERATOR NAMES */
 
-.helplink ~ .content li {
-    margin: 5px 0;
-}
+.helplink ~ .content li { margin: 5px 0; }
 
-
-.titlebox {
-	font-size: larger;
-	margin-left: 10px;
-	margin-right: 10px;
-
-}
+.titlebox { font-size: larger; margin-left: 10px; margin-right: 10px; }
 
 .md-container-small .md .-text, .side .md .-text, .md-container-small .md p, .side .md p, .md-container-small .md pre > code, .side .md pre > code, .md-container-small .md th, .side .md th, .md-container-small .md td, .side .md td, .md-container-small .md li, .side .md li {
     font-size: 1em;
@@ -380,200 +507,11 @@ body > .content::before {
     margin-left: 2px;
 }
 
-.morelink {
-    background-color: none;
-    background-image: none;
-}
-
-.morelink:hover, .mlh {
-    border-color: none;
-    background-image: none;
-}
-
-.commentarea .thing {
-  background-color: white;
-  margin-bottom: 1px;
-  padding: 13px;
-
-}
-
-.comment .author {
-  font-weight: bold;
-  font-size: 12px;
-  color: #C0392B;
-}
-
-.comment .md {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: black;
-}
-
-#sr-header-area {
-  background-color: white;
-  white-space: nowrap;
-  border-bottom: 0px solid gray;
-  font-size: 10px;
-  line-height: 18px;
-  box-shadow: 0px 0px 5px black;
-}
-
-
-.content {
-  background-color: white;
-  margin: 10px 315px 0px 10px;
-  padding: 10px 0px 0px 0px;
-}
-
-.link {
-  background-color: white;
-  box-shadow: 0 1px 5px 0 #dbdbdb;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 10px;
-  padding-left: 0px;
-  font-size: 10px;
-
-}
-
-.stickied {
-  /* border-bottom: 2px solid #acf8cc; */
-}
-
-.thing, .title { 
-  /* background-image: url(%%content-transparent-bg%%); */
-
-}
-
-.link .title {
-  font-size: large;
-  font-weight: normal;
-  margin-bottom: 1px;
-
-}
-
-.link .title:visited {
-  color: #95a5a6;
-
-}
-
-.link .usertext-body .md {
-  border: 1px solid #e0e0e0;
-
-}
-
-.entry .buttons li a {
-    color: #888;
-    font-weight: normal;
-    padding: 0 1px;
-}
-
-
-.thing .title {
-  outline: none;
-  margin-right: .4em;
-  padding: 0px;
-  overflow: hidden;
-  unicode-bidi: isolate;
-  color: #4b4b4b;
-
-}
-
-.thing.stickied.link a.title {
-  color: #27ae60;
-
-}
-
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #369;
-
-}
-
-.roundfield {
-  background-color: white;
-  box-shadow: 0px 0px 5px #95a5a6;
-}
-
-.formtabs-content {
-  border-top: 4px solid #f44274;
-}
-
-ul.tabmenu.formtab {
-
-
-}
-
-.tabmenu.formtab .selected a {
-  background-color: #2c3e50;
-
-}
-
-.tabmenu li a {
-  background-color: #ecf0f1;
-
-}
-
-.infobar {
-  background-color: transparent;
-  border: none;
-
-}
-
-
-.morelink {
-  border: none;
-}
-
-.morelink a {
-  /* background-image: url(%%submit-btn%%); */
-  box-shadow: 0px 2px 3px #c8c8c8;
-  color: white;
-  font-size: 12px;
-  font-weight: normal;
-  margin-left: 15px;
-  text-transform: uppercase;
-  width: 90%;
-  background-color: #C0392B;
-  letter-spacing: 0.2px;
-  border-radius: 15px;
-}
-
-.tagline, .search-result-meta {
-    color: #888;
-    font-size: 12px;
-    padding: 5px;
-}
-
-.tagline .stickied-tagline, .search-result-meta .stickied-tagline {
-    color: #FFF;
-    background-color: #27ae60;
-    border-radius: 15px;
-    padding-top: 4px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: bold;
-}
-
-.link .flat-list {
-    display: block;
-    padding: 1px 0;
-    text-transform: uppercase;
-}
-
-
 /** EDIT FLAIRS HERE **/
 
-.flairselector .selected, .flairselector.active li {
-	padding: 5px;
-}
+.flairselector .selected, .flairselector.active li { padding: 5px; }
 
-.flairselector.drop-choices.active {
-    border: none;
-    display: block;
-}
+.flairselector.drop-choices.active { border: none; display: block; }
 
 .flairselector {
     border: none;
@@ -601,11 +539,62 @@ ul.tabmenu.formtab {
 }
 
 
+/** USER FLAIRS **/
+
+.flair-userflair-claudine {
+    background: url(%%RevueStarlight-Userflairs-v2%%);
+    background-position: -14px 736px;
+    /* border: 2px solid #fe9952 !important; */
+    border-radius: 50%;
+	width: 39px;
+	height: 41px;
+}
+
+/** LINK FLAIRS **/
+
+.flair, .linkflairlabel {
+	border: none;
+	vertical-align: middle;
+}
+
+.linkflair-LinkFlair-livestream .linkflairlabel {
+    background-color: #d63031;
+	color: #fff;
+    font-weight: bold;
+	/* border-radius: 15px; */
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 /* BUTTONS */
 
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-/* background-image: url(%%submit-btn%%); */
+/* background-image: url(%%submit-btn%%); */ }
+
+.usertext-buttons .save{
+    box-shadow: 0px 2px 3px #c8c8c8;
+    margin: 5px 5px 10px 0;
+    border: none;
+    background-color: #C0392B;
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+}
+
+.usertext-buttons .cancel{
+    box-shadow: 1px 1px 3px #c8c8c8;
+    margin: 5px 5px 10px 0;
+    border: none;
+    background-color: #ECE9E0;
+    color: black;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 12px;
 
 }
 
@@ -667,7 +656,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     padding: 15px;
     margin-left: 5px;
     margin-top: 5px
-    }
+}
 
 .arrow.downmod {
 
@@ -676,7 +665,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 }
 
-/* FOOTER */
+/* CUSTOMIZE FOOTER HERE */
 
 .footer-parent {
 	padding-top: 650px;
@@ -688,7 +677,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 
 .footer {
-
     color: gray;
     padding: 15px;
     margin: 15px auto;
@@ -699,7 +687,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     background-color: #9e9e9e1a;
     font-size: 13px;
     text-transform: capitalize;
-
 }
 
 .flat-vert.title {
@@ -749,7 +736,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     display: none;
 }
 
-/* Change spoiler tag code */
+/* CHANGE SPOILER TAG CODE */
 
 .spoiler-stamp {
     background-color: #c82a2a;
@@ -818,7 +805,7 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
 }
 
 
-/* Replace ' readers' with something else*/
+/* REPLACE "READERS" WITH CUSTOM TEXT */
 .subscribers .word {
 	display: none;
 }  
@@ -834,7 +821,7 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
     padding-right: 50px;
 }
 
-/* Replace 'users here now' with something else*/
+/* REPLACE "USERS HERE NOW" WITH CUSTOM TEXT */
 
 .users-online .word {
 	display: none;
@@ -851,15 +838,10 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
 }
 
 
-/* Replace 'subreddit name' with something else */
-.side .redditname {
-	font-size:0;
-}
+/* REPLACE "SUBREDDIT NAME" WITH CUSTOM TEXT*/
+.side .redditname { font-size:0; }
 
-.side .redditname:after {
-    font-size:18px;
-    content:"Shoujo☆Kageki Revue Starlight";
-}
+.side .redditname:after { font-size:18px; content:"Shoujo☆Kageki Revue Starlight"; }
 
 .linkinfo {
     padding: 5px;
@@ -871,33 +853,6 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
     border-radius: 0px;
     margin: 0px 10px 1px 10px;
 }
-
-.usertext-buttons .save{
-
-    box-shadow: 0px 2px 3px #c8c8c8;
-    margin: 5px 5px 10px 0;
-    border: none;
-    background-color: #C0392B;
-    color: white;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    font-size: 12px;
-
-}
-
-.usertext-buttons .cancel{
- 
-    box-shadow: 1px 1px 3px #c8c8c8;
-    margin: 5px 5px 10px 0;
-    border: none;
-    background-color: #ECE9E0;
-    color: black;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    font-size: 12px;
-
-}
-
 
 .panestack-title {
     margin: 10px 310px 0px 10px;
@@ -912,49 +867,46 @@ a:hover[href|="#spoiler"],a:hover[href|="#spoiler"],body:lang(bc) a:hover[href|=
     text-transform: uppercase;
 }
 
-.commentarea .menuarea {
-    border: none;
-    margin: 0 310px 10px 10px;
-    padding: 0;
-    color: gray;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-textarea {
-    background-color: #FCFBF6;
-    color: #161616;
-    border: 1px solid #CCC;
-}
-
 .dropdown.srdrop .selected {
     background: none no-repeat scroll center right;
     background-image: none;
-    display: inline-block;
-    vertical-align: bottom;
-    padding-right: 0px;
-    padding-left: 5px;
     color: black;
+    cursor: pointer;
+    display: inline-block;
     font-size: 0px;
     margin-left: -5px;
     margin-right: 5px;
-    cursor: pointer;
+    padding-right: 0px;
+    padding-left: 5px;
+    vertical-align: bottom;
 }
 
 .dropdown.srdrop .selected:before {
-    content: "☰";
     background: none no-repeat scroll center right;
-        background-image: none;
-    display: inline-block;
-    vertical-align: bottom;
-    padding-right: 0px;
-    padding-left: 5px;
+    background-image: none;
     color: black;
+    content: "☰";
+    cursor: pointer;
+    display: inline-block;
     font-size: 12px;
     margin-left: -5px;
     margin-right: 10px;
-    cursor: pointer;
+    padding-right: 0px;
+    padding-left: 5px;
+    vertical-align: bottom;
 }
+
+/* CUSTOMIZE SIDE LINKS HERE */
+
+/* .side a[href="https://discordapp.com/invite/dZ93wsW"] {
+    display: inline-block;
+    height: 80px; 
+    width: 100%;
+    background: url(%%RevueStarlight-Discord%%);
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: transparent;
+} */
 
 .nav-buttons {
     padding: 8px;
@@ -998,17 +950,6 @@ a.author {
 
 /** Moderator page and backend **/
 
-:lang(nm) ul.image-preview-list .description {
-    color: white;
-}
-
-:lang(nm) ul.image-preview-list .description pre {
-    display: inline;
-    padding: 5px;
-    color: #fff;
-    background-color: transparent;
-}
-
 .linefield {
     width: 514px;
     padding: 10px 20px;
@@ -1027,26 +968,30 @@ a.author {
     border: none;
 }
 
-/** Toggle between Light and Dark theme **/
-
-.side a[href="https://reddit.com/r/RevueStarlight"] {
-    display: none;
+:lang(nm) ul.image-preview-list .description {
+    color: white;
 }
 
-:lang(nm) .side a[href="https://nm.reddit.com/r/RevueStarlight"] {
-    display: none;
-}
-
-:lang(nm) .side a[href="https://reddit.com/r/RevueStarlight"] {
+:lang(nm) ul.image-preview-list .description pre {
     display: inline;
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
 }
 
-/** 
-*
-* NIGHT MODE (EXPERIMENTAL)
-*
-*
-**/
+
+/** TOGGLE BETWEEN LIGHT AND DARK MODE **/
+
+.side a[href="https://reddit.com/r/RevueStarlight"] { display: none;
+}
+
+:lang(nm) .side a[href="https://nm.reddit.com/r/RevueStarlight"] { display: none;
+}
+
+:lang(nm) .side a[href="https://reddit.com/r/RevueStarlight"] {display: inline;
+}
+
+/** CSS CONTAINING DARK MODE **/
 
 :lang(nm) .thumbnail.self {
     background-image: url(%%kirin%%);
@@ -1064,109 +1009,60 @@ a.author {
 }
 
 :lang(nm) #header {
-  background-image: url(%%Header-photo-hikari-karen%%);
+  /* background-image: url(%%Header-photo-hikari-karen%%); */
   box-shadow: 1px 1px 4px #000;
 }
 
-:lang(nm) #sr-header-area {
-  background-color: #121212;
+:lang(nm) #sr-header-area { background-color: #121212; }
+
+:lang(nm) #sr-more-link { background-color: #121212; }
+
+:lang(nm) #sr-header-area .drop-choices.srdrop { background-color: #121212; }
+
+:lang(nm) .dropdown.srdrop .selected { color: #bababa; }
+
+:lang(nm) .dropdown.srdrop .selected:before { color: #bababa; }
+
+:lang(nm) .usertext-edit textarea { background-color: #262626; border: none; color: #bababa; }
+
+:lang(nm) #header a { color: #bababa; }
+
+:lang(nm) .morelink a { box-shadow: 0px 2px 3px #000; }
+
+:lang(nm) .side .md table * { border-color: #343434; }
+
+:lang(nm) .sidecontentbox a.helplink { box-shadow: 0px 2px 3px #000; }
+
+:lang(nm) body > .content::before { color: white; } 
+
+:lang(nm) .content { background-color: #161616; }
+
+:lang(nm) .side { background-color: #202020; box-shadow: none; color: #bababa; }
+
+:lang(nm) .sidecontentbox .title h1 { color: #bababa; }
+
+:lang(nm) .link { background-color: #202020; box-shadow: none; color: white; }
+
+:lang(nm) .side .md { font-size: 0.9230769230769231em; color: #bababa; }
+
+:lang(nm) .md a { color: #d4920c; text-decoration: none;
 }
 
-:lang(nm) #sr-more-link {
-    background-color: #121212;
+:lang(nm) .tagline a, .search-result-meta a { color: #d4920c; text-decoration: none; }
+
+
+:lang(nm) .morelink { background: none;
 }
 
-:lang(nm) #sr-header-area .drop-choices.srdrop {
-    background-color: #121212;
+:lang(nm) .commentarea .md { margin-top: 5px; margin-bottom: 5px; color: white;
 }
 
-:lang(nm) .dropdown.srdrop .selected {
-    color: #bababa;
+:lang(nm) .commentarea .thing { background-color: #161616; margin-bottom: 1px; padding: 13px;
 }
 
-:lang(nm) .dropdown.srdrop .selected:before {
-    color: #bababa;
+:lang(nm) .flairselector { background-color: #323232; box-shadow: 0px 0px 25px #0e0e0e;
 }
 
-:lang(nm) .usertext-edit textarea {
-    background-color: #262626;
-    border: none;
-    color: #bababa;
+:lang(nm) .roundfield { background-color: #323232; box-shadow: 0px 0px 5px #09090980;
 }
 
-:lang(nm) #header a {
-    color: #bababa;
-}
-
-:lang(nm) .morelink a {
-    box-shadow: 0px 2px 3px #000;
-}
-
-:lang(nm) .side .md table * {
-    border-color: #343434;
-}
-
-:lang(nm) .sidecontentbox a.helplink {
-    box-shadow: 0px 2px 3px #000;
-}
-
-:lang(nm) body > .content::before {
-	color: white;
-} 
-
-:lang(nm) .content {
-    background-color: #161616;
-}
-
-:lang(nm) .side {
-    background-color: #202020;
-    box-shadow: none;
-    color: #bababa;
-}
-
-:lang(nm) .sidecontentbox .title h1 {
-    color: #bababa;
-}
-
-:lang(nm) .link {
-    background-color: #202020;
-    box-shadow: none;
-    color: white;
-}
-
-:lang(nm) .side .md {
-    font-size: 0.9230769230769231em;
-    color: #bababa;
-}
-
-:lang(nm) .md a {
-    color: #d4920c;
-    text-decoration: none;
-}
-
-:lang(nm) .tagline a, .search-result-meta a {
-    color: #d4920c;
-    text-decoration: none;
-}
-
-
-:lang(nm) .morelink {
-    background: none;
-}
-
-:lang(nm) .commentarea .md {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: white;
-}
-
-:lang(nm) .commentarea .thing {
-    background-color: #161616;
-    margin-bottom: 1px;
-    padding: 13px;
-}
-
-:lang(nm) .flairselector {
-    background-color: #323232;
-    box-shadow: 0px 0px 25px #0e0e0e;
-}
