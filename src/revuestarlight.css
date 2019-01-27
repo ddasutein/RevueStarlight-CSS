@@ -2,7 +2,7 @@
 
 body { background-color: #eee; font-size: 12px; }
 
-/** VERSION 1.12
+/** VERSION 1.13
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
 **/
@@ -268,11 +268,28 @@ textarea {
 }
 
 #header .drop-choices {
-    padding: 5px 5px 5px 20px;
+    padding: 5px 15px 5px 15px;
+}
+
+#header .drop-choices a.choice {
+	padding: 5px 15px 5px 5px;
+}
+
+.drop-choices {
+    position: absolute;
+    left: 0px;
+    border: 1px solid #e4e4e4;
+    z-index: 100;
+    background-color: white;
+    white-space: nowrap;
+    line-height: normal;
+    margin-top: 1px;
+    display: none;
+    box-shadow: 11px 11px 24px #1a1a1a1a;
 }
 
 .drop-choices a.choice:hover {
-	background-color: #bdc3c7;
+	background-color: #5AC3D9;
 }
 
 .srdrop .choice.bottom-option {
@@ -282,10 +299,6 @@ textarea {
 
 #sr-header-area .width-clip {
 	font-size: 10px;
-}
-
-#header .drop-choices a.choice {
-	padding: 2px 3px 5px 3px;
 }
 
 #header a {
