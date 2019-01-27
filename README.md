@@ -16,3 +16,9 @@ Please note: Certain assets such as user flairs and header images are not includ
 
 * When submitting pull requests, be sure to explain your changes in detail and as much as possible, take a screenshot.
 
+## Recommended Color Palette
+
+If you wish to make changes to the subreddit, please use the color palettes below. [Credits](https://dribbble.com/shots/4143481-Flat-UI-Colors-2-Japan)
+
+![flat_ui_colors_2_japan](https://cdn.dribbble.com/users/703858/screenshots/4143481/flat_ui_colors_2__japan_.png)
+
