@@ -2,7 +2,7 @@
 
 body { background-color: #eee; font-size: 12px; }
 
-/** VERSION 1.13
+/** VERSION 1.13.1
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
 **/
@@ -66,7 +66,6 @@ body > .content::before {
     background-color: white;
     white-space: nowrap;
     border-bottom: 0px solid gray;
-    font-size: 10px;
     line-height: 18px;
     box-shadow: 0px 0px 5px black;
 }
@@ -238,7 +237,7 @@ textarea {
 }
 
 #sr-header-area .width-clip {
-    font-size: 10px;
+    font-size: 12px !important;
     width: 95%;
     margin-left: 15px;
     text-transform: initial;
