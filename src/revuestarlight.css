@@ -7,7 +7,7 @@ body {
     font-size: 12px;
 }
 
-/** VERSION 1.13.2
+/** VERSION 1.14
 * This is a CSS Reddit theme for /r/RevueStarlight designed by
 * /u/LoveArrowShooto. 
 **/
@@ -429,6 +429,244 @@ textarea {
     font-size: 14px;
     position: absolute;
 
+}
+
+/* CUSTOMIZE NEW MAIL TOAST MESSAGE */
+
+#mail, #modmail {
+    width: 16px;
+    height: 14px;
+    background-image: url(%%spritesheet%%) !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent;
+    transition: all .25s ease;
+}
+
+#mail {
+    top: -2px;
+    overflow: visible;
+}
+
+    #mail.nohavemail {
+        background-position: 0 0;
+    }
+
+    #mail.havemail {
+        background-position: 0 -32px;
+        opacity: 1;
+}
+
+#modmail {
+    top: -3px;
+}
+
+    #modmail.nohavemail {
+        background-position: -16px 0;
+    }
+
+    #modmail.havemail {
+        background-position: -16px -32px;
+        opacity: 1;
+    }
+
+#new_modmail, #chat {
+    transform: scale(.85);
+}
+
+#mail.havemail:before {
+    position: fixed;
+    padding: 1px 24px;
+    bottom: 24px;
+    z-index: 100;
+    background-color: #CA424F;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+    color: #fff;
+    width: 300px;
+    height: 48px;
+    left: 32px;
+    content: "You have a new message";
+    text-indent: 0;
+    font-size: 12px;
+    line-height: 4;
+    -webkit-transform: translateY(112px);
+    transform: translateY(112px);
+    transition: background-color .25s ease, box-shadow .25s ease;
+    background-image: url(%%spritesheet%%);
+    background-position: 295px -173px;
+    background-repeat: no-repeat
+}
+#mail.havemail:hover:before {
+    background-color: #ec5b5b;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.48)
+}
+#mail.havemail:active:before {
+    background-color: #c73d3d;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.76)
+}
+#mail.havemail:before {
+    animation-name: toast;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    -webkit-animation-name: toast;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease
+}
+#mail.havemail:hover:before {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused
+}
+@-webkit-keyframes toast {
+    0% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    20% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    25% {
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        opacity: 1
+    }
+    27% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    92% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    97% {
+        transform: translateY(16px);
+        -webkit-transform: translateY(16px);
+        opacity: 1
+    }
+    100% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+}
+@-o-keyframes toast {
+    0% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    20% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    25% {
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        opacity: 1
+    }
+    27% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    92% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    97% {
+        transform: translateY(16px);
+        -webkit-transform: translateY(16px);
+        opacity: 1
+    }
+    100% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+}
+@-moz-keyframes toast {
+    0% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    20% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    25% {
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        opacity: 1
+    }
+    27% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    92% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    97% {
+        transform: translateY(16px);
+        -webkit-transform: translateY(16px);
+        opacity: 1
+    }
+    100% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+}
+@keyframes toast {
+    0% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    20% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
+    25% {
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        opacity: 1
+    }
+    27% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    92% {
+        transform: translateY(00px);
+        -webkit-transform: translateY(00px);
+        opacity: 1
+    }
+    97% {
+        transform: translateY(16px);
+        -webkit-transform: translateY(16px);
+        opacity: 1
+    }
+    100% {
+        transform: translateY(76px);
+        -webkit-transform: translateY(76px);
+        opacity: 0
+    }
 }
 
 /* CUSTOMIZE TAB MENUS HERE */
