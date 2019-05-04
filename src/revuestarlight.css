@@ -1,22 +1,42 @@
-* {
-    font-family: Arial;
+/**
+VERSION 2.0.0 
+Stylesheet designed and maintained by LoveArrowShooto
+GitHub: https://github.com/ddasutein/RevueStarlight-CSS
+
+This stylesheet is licensed under the MIT License
+https://github.com/ddasutein/RevueStarlight-CSS/blob/master/License.md
+
+LEGAL NOTES/CREDITS - DO NOT REMOVE
+A) CSS animations by Daniel Eden - https://github.com/daneden/animate.css (MIT License)
+B) New/Mod Mail Toast based on Naut-for-reddit by Axel-- - https://github.com/Axel--/Naut-for-reddit
+-------------------------------------------------------------------------- **/
+
+/* ALL CSS ELEMENTS AND BODY ONLY */
+* { font-family: 'Segoe UI', 'Roboto','-apple-system', 'BlinkMacSystemFont', 'Arial', sans-serif !important;; }
+body { background-color: #eee ; font-size: 12px; }
+
+/* CHANGE ANNOUNCEMENT MESSAGE HERE */
+body>.content::before {
+    content: "This Reddit theme is designed and maintained by /u/LoveArrowShooto";
+    background-repeat: no-repeat;
+    bottom: 0px;
+    border: none;
+    color: #3c3c3c;
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: -0.6px !important;
+    margin-bottom: 0px !important;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    width: 100%;
 }
 
-body {
-    background-color: #eee;
-    font-size: 12px;
-}
-
-/** VERSION 1.14
-* This is a CSS Reddit theme for /r/RevueStarlight designed by
-* /u/LoveArrowShooto. 
-**/
-
-/* CHANGE SUBREDDIT HEADER HERE */
-
+/* CHANGE SUBREDDIT HEADER IMAGE HERE */
 #header {
-    background-image: url(%%desktop-starry-sky%%);
-    background-color: #160203;
+    /** REPLACE WITH YOUR OWN HEADER HERE **/
+    /* background-image: url(%%desktop-starry-sky%%); */ 
+    background-color: #da3c44;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 4px #898989;
@@ -26,24 +46,7 @@ body {
     border: none;
 }
 
-/* CHANGE ANNOUNCEMENT MESSAGE HERE */
-
-body>.content::before {
-    content: "Welcome to /r/RevueStarlight. Please don't forget to FLAIR your post.";
-    background-repeat: no-repeat;
-    bottom: 0px;
-    border: none;
-    color: #3c3c3c;
-    display: block;
-    font-weight: normal;
-    font-size: 15px;
-    letter-spacing: 0.8px;
-    margin-bottom: 0px !important;
-    padding: 0px 0px 10px 0px;
-    text-align: center;
-    width: 100%;
-}
-
+/* CUSTOMIZE SUBREDDIT CONTENT */
 body>.content .link .rank,
 .rank-spacer {
     width: 2.2ex;
@@ -51,7 +54,7 @@ body>.content .link .rank,
 
 .link .rank {
     float: left;
-    margin-top: -5px;
+    margin-left: 10px !important;
     color: #c6c6c6;
     font-weight: bold;
     font-size: 10px;
@@ -59,20 +62,21 @@ body>.content .link .rank,
 }
 
 
-/* CUSTOMIZE SUBREDDIT CONTENT */
-
 .thumbnail.self {
-    background-image: url(%%kirin%%);
+    /** (OPTIONAL) ADD YOUR OWN THUMBNAIL FOR TEXT BASED POST **/
+    /* background-image: url(%%kirin%%); 
     background-position: -65px -50px;
     background-repeat: no-repeat;
-    background-size: 185%;
-    height: 58px;
+    background-size: 185%; 
+    height: 58px;  */
 }
 
 .content {
     background-color: white;
+    box-shadow: 1px 1px 15px #dbdbdb;
     margin: 10px 315px 0px 10px;
     padding: 10px 0px 0px 0px;
+    
 }
 
 .commentarea .thing {
@@ -203,7 +207,7 @@ a {
     width: 90%;
     background-color: #C0392B;
     letter-spacing: 0.2px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .tagline,
@@ -247,8 +251,7 @@ textarea {
 }
 
 
-/* CUSTOMIZE SUBREDDIT DESCRIPTION HERE */
-
+/** CUSTOMIZE SIDEBAR **/
 .titlebox .usertext .md>h3 {
     background-color: #C0392B;
     color: white;
@@ -259,7 +262,6 @@ textarea {
 }
 
 .titlebox h1 {
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", Helvetica, Arial, "Lucida Grande", sans-serif;
     margin-bottom: 10px;
     font-weight: normal;
     text-align: center;
@@ -275,31 +277,70 @@ textarea {
     text-transform: uppercase;
 }
 
+/* CUSTOMIZE HEADER HERE */
 .pagename a {
-    background-image: url(%%revuestarlight-en-logo%%);
+    /** ADD YOUR SUBREDDIT LOGO HERE **/
+    /* background-image: url(%%revuestarlight-en-logo%%); */
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 235px;
+    height: 156px;
     width: 395px;
     left: 50px;
     right: 0px;
-    bottom: 0;
+    bottom: 79px;
     display: block;
     font-size: 0px;
     position: absolute;
-
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.7s;
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+    animation-duration: 2.0s;
 }
 
-/* CUSTOMIZE HEADER HERE */
-
-#header-bottom-left .default-header {
-    visibility: hidden;
+.pagename {
+    font-weight: bold;
+    margin-left: 4ex;
+    font-variant: none;
+    font-size: inherit;
+    vertical-align: bottom;
 }
+
+@-webkit-keyframes zoomInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+  }
+  
+  @keyframes zoomInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+  }
+
+#header-bottom-left .default-header { visibility: hidden; }
 
 #sr-header-area .width-clip {
     font-size: 12px !important;
@@ -331,14 +372,8 @@ textarea {
     padding-right: 25px;
 }
 
-#header .drop-choices {
-    padding: 5px 15px 5px 15px;
-}
-
-#header .drop-choices a.choice {
-    padding: 5px 15px 5px 5px;
-}
-
+#header .drop-choices { padding: 5px 15px 5px 15px; }
+#header .drop-choices a.choice { padding: 5px 15px 5px 5px; }
 .drop-choices {
     position: absolute;
     left: 0px;
@@ -391,13 +426,6 @@ textarea {
     font-weight: bold;
     color: #c0392b;
     text-transform: uppercase;
-
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.7s;
-
 }
 
 #header-bottom-left {
@@ -432,8 +460,8 @@ textarea {
 }
 
 /* CUSTOMIZE NEW MAIL TOAST MESSAGE */
-
-#mail, #modmail {
+#mail,
+#modmail {
     width: 16px;
     height: 14px;
     background-image: url(%%spritesheet%%) !important;
@@ -447,29 +475,30 @@ textarea {
     overflow: visible;
 }
 
-    #mail.nohavemail {
-        background-position: 0 0;
-    }
+#mail.nohavemail {
+    background-position: 0 0;
+}
 
-    #mail.havemail {
-        background-position: 0 -32px;
-        opacity: 1;
+#mail.havemail {
+    background-position: 0 -32px;
+    opacity: 1;
 }
 
 #modmail {
     top: -3px;
 }
 
-    #modmail.nohavemail {
-        background-position: -16px 0;
-    }
+#modmail.nohavemail {
+    background-position: -16px 0;
+}
 
-    #modmail.havemail {
-        background-position: -16px -32px;
-        opacity: 1;
-    }
+#modmail.havemail {
+    background-position: -16px -32px;
+    opacity: 1;
+}
 
-#new_modmail, #chat {
+#new_modmail,
+#chat {
     transform: scale(.85);
 }
 
@@ -491,19 +520,25 @@ textarea {
     line-height: 4;
     -webkit-transform: translateY(112px);
     transform: translateY(112px);
+    text-align: center;
     transition: background-color .25s ease, box-shadow .25s ease;
-    background-image: url(%%spritesheet%%);
-    background-position: 295px -173px;
-    background-repeat: no-repeat
+    /** (OPTIONAL) IF YOU WANT TO ADD YOUR OWN ICON **/
+    /* background-image: url(%%kirin%%);
+    background-size: 30%;
+    background-position: -50px -38px;
+    background-repeat: no-repeat */
 }
+
 #mail.havemail:hover:before {
     background-color: #ec5b5b;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.48)
 }
+
 #mail.havemail:active:before {
     background-color: #c73d3d;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.76)
 }
+
 #mail.havemail:before {
     animation-name: toast;
     animation-duration: 8s;
@@ -514,154 +549,183 @@ textarea {
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease
 }
+
 #mail.havemail:hover:before {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
     animation-play-state: paused
 }
+
 @-webkit-keyframes toast {
     0% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     20% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     25% {
         transform: translateY(-8px);
         -webkit-transform: translateY(-8px);
         opacity: 1
     }
+
     27% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     92% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     97% {
         transform: translateY(16px);
         -webkit-transform: translateY(16px);
         opacity: 1
     }
+
     100% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
 }
+
 @-o-keyframes toast {
     0% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     20% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     25% {
         transform: translateY(-8px);
         -webkit-transform: translateY(-8px);
         opacity: 1
     }
+
     27% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     92% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     97% {
         transform: translateY(16px);
         -webkit-transform: translateY(16px);
         opacity: 1
     }
+
     100% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
 }
+
 @-moz-keyframes toast {
     0% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     20% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     25% {
         transform: translateY(-8px);
         -webkit-transform: translateY(-8px);
         opacity: 1
     }
+
     27% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     92% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     97% {
         transform: translateY(16px);
         -webkit-transform: translateY(16px);
         opacity: 1
     }
+
     100% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
 }
+
 @keyframes toast {
     0% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     20% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
         opacity: 0
     }
+
     25% {
         transform: translateY(-8px);
         -webkit-transform: translateY(-8px);
         opacity: 1
     }
+
     27% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     92% {
         transform: translateY(00px);
         -webkit-transform: translateY(00px);
         opacity: 1
     }
+
     97% {
         transform: translateY(16px);
         -webkit-transform: translateY(16px);
         opacity: 1
     }
+
     100% {
         transform: translateY(76px);
         -webkit-transform: translateY(76px);
@@ -669,8 +733,8 @@ textarea {
     }
 }
 
-/* CUSTOMIZE TAB MENUS HERE */
 
+/* CUSTOMIZE TAB MENUS (HOT, NEW, RISING, ETC) */
 .tabmenu {
     margin-top: -2px;
     font-weight: bold;
@@ -682,6 +746,17 @@ textarea {
     animation-duration: 0.7s;
 
 }
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .tabmenu li a {
     display: inline-block;
@@ -713,11 +788,32 @@ textarea {
 
 }
 
-/* CUSTOMIZE SUBMIT PAGE HERE */
-
+/* CUSTOMIZE SUBMIT (TEXT/URL) PAGE */
 .submit.content {
     width: 520px;
     margin: auto;
+    padding: 20px;
+}
+
+.submit-page div.content > h1 {
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.submit.content button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #c8c8c8;
+    background-color: #C0392B;
+    color: #fff;
+    cursor: pointer;
+    font-size: inherit;
+    margin: 5px 5px 10px 0px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    width: 518px;
 }
 
 .formtabs-content {
@@ -747,8 +843,7 @@ textarea {
 
 }
 
-/* CUSTOMIZE SIDE BOX HERE */
-
+/* CUSTOMIZE SUBREDDIT SIDEBAR CONTENT */
 #search input[type="text"] {
     border: 1px solid #e5e5e5;
     border-radius: 15px;
@@ -791,11 +886,16 @@ textarea {
     padding: 5px;
     font-size: small;
     list-style: none;
+    box-shadow: 0px 0px 0px !important;
+}
+
+.sidecontentbox .content .link .flair {
+    float: none !important;
 }
 
 .sidecontentbox a.helplink {
     background-color: #C0392B;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 0px 2px 3px #c8c8c8;
     color: white;
     float: right;
@@ -816,8 +916,22 @@ textarea {
     display: none;
 }
 
-/* ADJUST PADDING FOR MODERATOR NAMES */
+.md hr {
+    border: 0;
+    color: transparent;
+    background: #e7e7e7;
+    height: 1px;
+    padding: 0;
+}
 
+.titlebox .bottom {
+    border: none;
+    padding-top: 5px;
+    color: #575757;
+    font-size: inherit;
+}
+
+/* ADJUST PADDING FOR MODERATOR NAMES */
 .helplink~.content li {
     margin: 5px 0;
 }
@@ -845,33 +959,42 @@ textarea {
     margin-left: 2px;
 }
 
-/** EDIT FLAIRS HERE **/
-
-.flairselector .selected,
-.flairselector.active li {
-    padding: 5px;
+/* "RECENTLY VIEWED LINKS" */
+.gadget .linkflairlabel {
+    display: none;
 }
 
-.flairselector.drop-choices.active {
-    border: none;
-    display: block;
-}
-
+/** FLAIR SELECTOR  **/
 .flairselector {
     border: none;
-    box-shadow: 0px 0px 25px #ccc;
+    box-shadow: 5px 5px 10px #4545451a;
     font-size: x-small;
     position: absolute;
     width: 400px;
 }
 
+.flairselector.drop-choices.active {
+    border: none;
+    display: block;
+    height: auto;
+    width: 480px;
+    padding: 10px 30px 15px 40px;
+    left: 338.6px;
+    top: 678.4px;
+}
+
+.flairselector .selected,
+.flairselector.active li {
+    padding: 3.5px;
+}
+
 .flairselector h2 {
     background: none;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
     text-align: center;
     color: black;
-    font-size: 14px;
+    font-size: 16px;
+    margin: 5px 0px 15px 0px;
+    text-transform: uppercase;
 }
 
 .flairselector form {
@@ -882,40 +1005,22 @@ textarea {
     text-align: center;
 }
 
-
-/** USER FLAIRS **/
-
-.flair-userflair-claudine {
-    background: url(%%RevueStarlight-Userflairs-v2%%);
-    background-position: -14px 736px;
-    /* border: 2px solid #fe9952 !important; */
-    border-radius: 50%;
-    width: 39px;
-    height: 41px;
+.flairselector form button {
+    margin-left: 10px;
+    background-color: #c0392b;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 5px;
 }
 
-/** LINK FLAIRS **/
-
-.flair,
-.linkflairlabel {
-    border: none;
+.flairselector .customizer input {
+    display: none;
+    padding: 2px;
     vertical-align: middle;
 }
 
-.linkflair-LinkFlair-livestream .linkflairlabel {
-    background-color: #d63031;
-    color: #fff;
-    font-weight: bold;
-    /* border-radius: 15px; */
-    padding-top: 4px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* BUTTONS */
-
-
+/* STYLESHEET BUTTONS */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -924,6 +1029,7 @@ input[type="submit"] {
 }
 
 .usertext-buttons .save {
+    border-radius: 5px;
     box-shadow: 0px 2px 3px #c8c8c8;
     margin: 5px 5px 10px 0;
     border: none;
@@ -932,10 +1038,10 @@ input[type="submit"] {
     padding: 10px 15px;
     text-transform: uppercase;
     font-size: 12px;
-
 }
 
 .usertext-buttons .cancel {
+    border-radius: 5px;
     box-shadow: 1px 1px 3px #c8c8c8;
     margin: 5px 5px 10px 0;
     border: none;
@@ -954,11 +1060,8 @@ input[type="submit"] {
 /* .thing .midcol { width: 70px !important; } */
 
 .arrow.up {
-    background-image: url(%%upvote-not-selected%%);
-    /* background-image: url(%%upvote-animation%%);
-        width: 45px;
-        height: 26px;   */
-    background-position: 0px 0px;
+    /* background-image: url(%%upvote-not-selected%%);
+    background-position: 0px 0px; */
 
 }
 
@@ -973,59 +1076,42 @@ input[type="submit"] {
 }
 
 .arrow.upmod {
-    background-image: url(%%upvote-selected%%);
-    background-position: 0px 0px;
-
-    /* background-image: url(%%upvote-animation%%);
-        width: 44px;
-        height: 25px;
-        animation: arrow 0.4s steps(14);
-        animation-fill-mode: forwards; */
+    /* background-image: url(%%upvote-selected%%);
+    background-position: 0px 0px; */
 }
 
 .arrow.down {
 
-    background-image: url(%%downvote-not-selected%%);
-    background-position: 0px 0px;
-
+    /* background-image: url(%%downvote-not-selected%%);
+    background-position: 0px 0px; */
 }
 
 .arrow.down:hover:before {
-    content: "Please don't downvote because you disagree";
+    content: "Please don't downvote because you disagree.";
     background-color: #FCFBF6;
     color: #000;
     border: 1px solid #69696C;
     box-shadow: 1px 1px 25px #ECE9E0;
     font-size: 12px;
-    font-weight: normal;
-    text-align: left;
+    font-weight: bold;
+    text-align: center;
     position: absolute;
     display: block;
     z-index: 1000;
     width: 102px;
     padding: 15px;
     margin-left: 5px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .arrow.downmod {
 
-    background-image: url(%%downvote-selected%%);
-    background-position: 0px 0px;
+    /* background-image: url(%%downvote-selected%%);
+    background-position: 0px 0px; */
 
 }
 
-/* CUSTOMIZE FOOTER HERE */
-
-.footer-parent {
-    padding-top: 650px;
-    background-image: url(%%CastCharacters--bg%%);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: center 0px;
-}
-
-
+/* CUSTOMIZE SUBREDDIT FOOTER */
 .footer {
     color: gray;
     padding: 15px;
@@ -1039,30 +1125,22 @@ input[type="submit"] {
     text-transform: capitalize;
 }
 
+.footer-parent {
+    padding-top: 650px;
+}
+
 .flat-vert.title {
     color: #3f3f3f;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
-
 }
-
 
 /* SHOW/HIDE ITEMS */
 
-.link .rank {
-    visibility: visible;
-
-}
-
-.morelink .nub {
-    height: 0px;
-}
-
-.nub {
-    display: none;
-}
-
+.link .rank { visibility: visible; }
+.morelink .nub { height: 0px; }
+.nub { display: none; }
 .sidebox.create .spacer a {
     /** background-image: url(sprite-reddit.bTLvdEETokI.png); **/
     background-position: -76px -1043px;
@@ -1135,7 +1213,7 @@ input[type="submit"] {
 }
 
 .linkflair-spoiler .thumbnail {
-    background-image: url(%%test-image%%);
+    /*background-image: url(%%test-image%%); */
     background-position: 0px 0px;
     width: 70px;
     height: 70px;
@@ -1220,7 +1298,6 @@ body:lang(bc) a:hover[href|="#spoiler"] {
     border: none;
     background-color: white;
     border: none;
-    font-family: arial, helvetica, sans-serif;
     font-size: 11px;
     border-radius: 0px;
     margin: 0px 10px 1px 10px;
@@ -1268,18 +1345,6 @@ body:lang(bc) a:hover[href|="#spoiler"] {
     vertical-align: bottom;
 }
 
-/* CUSTOMIZE SIDE LINKS HERE */
-
-/* .side a[href="https://discordapp.com/invite/dZ93wsW"] {
-    display: inline-block;
-    height: 80px; 
-    width: 100%;
-    background: url(%%RevueStarlight-Discord%%);
-    background-repeat: no-repeat;
-    background-size:contain;
-    color: transparent;
-} */
-
 .nav-buttons {
     padding: 8px;
     padding-top: 8px;
@@ -1298,20 +1363,8 @@ body:lang(bc) a:hover[href|="#spoiler"] {
     padding: 3px 9px;
     font-size: 12px;
     border: 1px solid #444;
-    border-radius: 35px;
+    border-radius: 5px;
     color: #575656;
-}
-
-/** Adjust CSS animations here **/
-
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .md a {
@@ -1320,10 +1373,82 @@ body:lang(bc) a:hover[href|="#spoiler"] {
 
 a.author {
     margin-right: 0.5em;
-    color: #575757;
+    color: #575656;
+    font-weight: bold;
 }
 
-/** Moderator page and backend **/
+.link .flair {
+    float: left;
+}
+
+/** CUSTOMIZE WIKI **/
+.wiki-page .wiki-page-content {
+    margin: 15px 30px 15px 30px;
+}
+
+.wiki-page .wikititle strong {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wiki-page .wikititle strong::before{
+    font-weight: bold;
+    content: "Revue Starlight Wiki / ";
+}
+
+.wiki-page .pageactions {
+    display: inline-block;
+    font-size: inherit;
+    margin-left: 25px;
+    border: none !important;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.wiki-page .pageactions .wikiaction-current {
+    color: #fff;
+    background-color: #C0392B;
+}
+
+.wiki-page .pageactions .wikiaction:hover {
+    color: #fff;
+    background-color:#C0392B
+}
+
+.wiki-page .wiki-page-content .wiki > .toc > ul {
+    float: left;
+    padding: 10px 10px;
+    margin: 0 30px 11px -9px;
+    border: none;
+    list-style: none;
+    max-width: 300px;
+}
+
+.wiki-page .wiki-page-content .wiki.md {
+    max-width: none;
+    margin-left: 25px;
+}
+
+.wiki-page-content .md h1, .wiki-page-content .md h6 {
+    color: #4b4b4b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wiki-page-content .md h2 {
+    color: #4b4b4b;
+    font-size: 16px;
+}
+
+.wiki-page-content .md h3 {
+    font-size: 16px;
+    line-height: 1.25em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #4b4b4b;
+}
+
+/** BACKEND STUFF (LIGHT & DARK MODE) **/
 
 .linefield {
     width: 514px;
@@ -1343,159 +1468,41 @@ a.author {
     border: none;
 }
 
-:lang(nm) ul.image-preview-list .description {
-    color: white;
+/* STYLESHEET EDITOR */
+
+.sheets {
+    margin: 0px;
+    padding: 10px;
 }
 
-:lang(nm) ul.image-preview-list .description pre {
-    display: inline;
+.stylesheet-customize-container h2 {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0px 10px 15px;
+    text-transform: uppercase;
+}
+
+.error {
+    color: #C0392B;
+    font-size: inherit;
+    margin-left: 15px;
+}
+
+.image-upload {
+    margin-left: 15px;
+}
+
+ul.image-preview-list {
+    margin: 20px 20px 20px 40px;
+    font-size: inherit;
+}
+
+#preview-table > table {
+    border-width: .2em;
+    border-style: dashed;
+    border-color: lightgray;
     padding: 5px;
-    color: #fff;
-    background-color: transparent;
-}
-
-
-/** TOGGLE BETWEEN LIGHT AND DARK MODE **/
-
-.side a[href="https://reddit.com/r/RevueStarlight"] {
-    display: none;
-}
-
-:lang(nm) .side a[href="https://nm.reddit.com/r/RevueStarlight"] {
-    display: none;
-}
-
-:lang(nm) .side a[href="https://reddit.com/r/RevueStarlight"] {
-    display: inline;
-}
-
-/** CSS CONTAINING DARK MODE **/
-
-:lang(nm) .thumbnail.self {
-    background-image: url(%%kirin%%);
-    background-position: 0px 4px;
-    background-repeat: no-repeat;
-    background-size: 185%;
-    height: 58px;
-}
-
-:lang(nm) body {
-    background: url(%%background%%);
-    background-color: #eee;
-    font-size: 12px;
-
-}
-
-:lang(nm) #header {
-    /* background-image: url(%%Header-photo-hikari-karen%%); */
-    box-shadow: 1px 1px 4px #000;
-}
-
-:lang(nm) #sr-header-area {
-    background-color: #121212;
-}
-
-:lang(nm) #sr-more-link {
-    background-color: #121212;
-}
-
-:lang(nm) #sr-header-area .drop-choices.srdrop {
-    background-color: #121212;
-}
-
-:lang(nm) .dropdown.srdrop .selected {
-    color: #bababa;
-}
-
-:lang(nm) .dropdown.srdrop .selected:before {
-    color: #bababa;
-}
-
-:lang(nm) .usertext-edit textarea {
-    background-color: #262626;
-    border: none;
-    color: #bababa;
-}
-
-:lang(nm) #header a {
-    color: #bababa;
-}
-
-:lang(nm) .morelink a {
-    box-shadow: 0px 2px 3px #000;
-}
-
-:lang(nm) .side .md table * {
-    border-color: #343434;
-}
-
-:lang(nm) .sidecontentbox a.helplink {
-    box-shadow: 0px 2px 3px #000;
-}
-
-:lang(nm) body>.content::before {
-    color: white;
-}
-
-:lang(nm) .content {
-    background-color: #161616;
-}
-
-:lang(nm) .side {
-    background-color: #202020;
-    box-shadow: none;
-    color: #bababa;
-}
-
-:lang(nm) .sidecontentbox .title h1 {
-    color: #bababa;
-}
-
-:lang(nm) .link {
-    background-color: #202020;
-    box-shadow: none;
-    color: white;
-}
-
-:lang(nm) .side .md {
-    font-size: 0.9230769230769231em;
-    color: #bababa;
-}
-
-:lang(nm) .md a {
-    color: #d4920c;
-    text-decoration: none;
-}
-
-:lang(nm) .tagline a,
-.search-result-meta a {
-    color: #d4920c;
-    text-decoration: none;
-}
-
-
-:lang(nm) .morelink {
-    background: none;
-}
-
-:lang(nm) .commentarea .md {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: white;
-}
-
-:lang(nm) .commentarea .thing {
-    background-color: #161616;
-    margin-bottom: 1px;
-    padding: 13px;
-}
-
-:lang(nm) .flairselector {
-    background-color: #323232;
-    box-shadow: 0px 0px 25px #0e0e0e;
-}
-
-:lang(nm) .roundfield {
-    background-color: #323232;
-    box-shadow: 0px 0px 5px #09090980;
+    margin-left: 15px;
+    width: 900px;
 }
