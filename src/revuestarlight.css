@@ -1,5 +1,5 @@
 /**
-VERSION 2.0.0 
+VERSION 2.0.1 
 Stylesheet designed and maintained by LoveArrowShooto
 GitHub: https://github.com/ddasutein/RevueStarlight-CSS
 
@@ -29,7 +29,7 @@ body>.content::before {
     margin-bottom: 0px !important;
     padding: 0px 0px 10px 0px;
     text-align: center;
-    width: 100%;
+    width: 99%;
 }
 
 /* CHANGE SUBREDDIT HEADER IMAGE HERE */
