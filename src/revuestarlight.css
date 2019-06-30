@@ -108,14 +108,6 @@ body>.content .link .rank,
     background-image: none;
 }
 
-#sr-header-area {
-    background-color: white;
-    white-space: nowrap;
-    border-bottom: 0px solid gray;
-    line-height: 18px;
-    box-shadow: 0px 0px 5px black;
-}
-
 .link {
     background-color: white;
     box-shadow: 0 1px 5px 0 #dbdbdb;
@@ -342,9 +334,18 @@ textarea {
 
 #header-bottom-left .default-header { visibility: hidden; }
 
+#sr-header-area {
+    background-color: #ffffffd6;
+    white-space: nowrap;
+    border-bottom: 0px solid gray;
+    line-height: 24px;
+    height: 25px;
+    box-shadow: 0px 0px 7px #9c9c9c73;
+}
+
 #sr-header-area .width-clip {
     font-size: 12px !important;
-    width: 95%;
+    width: 88%;
     margin-left: 15px;
     text-transform: initial;
 }
@@ -360,11 +361,18 @@ textarea {
     padding-left: 25px;
 }
 
+#sr-header-area .sr-bar a {
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
 #sr-more-link {
     color: black;
-    background-color: #fff;
+    background-color: transparent;
     position: absolute;
-    right: 0;
+    right: -69px;
     top: 0;
     padding: 0 5px 0 15px;
     padding-right: 5px;
@@ -385,10 +393,14 @@ textarea {
     margin-top: 1px;
     display: none;
     box-shadow: 11px 11px 24px #1a1a1a1a;
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: 700;
 }
 
 .drop-choices a.choice:hover {
-    background-color: #5AC3D9;
+    background-color: #C0392B;
+    color: white !important;
 }
 
 .srdrop .choice.bottom-option {
@@ -429,11 +441,7 @@ textarea {
 }
 
 #header-bottom-left {
-    /*background-color: rgba(25, 25, 25,.9);*/
-    margin: 252px 0px 0px 0px;
     opacity: 0.8;
-    padding-bottom: 20px;
-    font-size: 10px;
 }
 
 #header-img {
@@ -735,9 +743,11 @@ textarea {
 
 
 /* CUSTOMIZE TAB MENUS (HOT, NEW, RISING, ETC) */
-.tabmenu {
-    margin-top: -2px;
+#header .tabmenu {
+    font-size: 12px;
     font-weight: bold;
+    position: absolute; 
+    bottom: 0px;
 
     opacity: 1;
     animation-name: fadeInOpacity;
@@ -759,8 +769,13 @@ textarea {
 
 
 .tabmenu li a {
+    background-color: transparent !important;
+    color: #fff !important;
     display: inline-block;
+    font-size: 13px;
     text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px;
 }
 
 
@@ -781,6 +796,7 @@ textarea {
 
 
 .tabmenu li.selected a {
+    background-color: transparent;
     border: none;
     border-bottom: 4px solid white;
     font-weight: bold;
@@ -816,16 +832,22 @@ textarea {
     width: 518px;
 }
 
-.formtabs-content {
+.submit-page .formtabs-content {
     border-top: 4px solid #c0392b;
 }
 
-.tabmenu.formtab a {
+.submit-page ul.tabmenu.formtab {
+    display: block;
+    padding-left: 10px;
+    font-size: larger;
+}
+
+.submit-page .tabmenu.formtab a {
     border: none !important;
     border-bottom: none;
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: normal;
-    color: black;
+    color: black !important;
     outline: none;
     margin-left: -10px;
     text-transform: uppercase;
@@ -834,14 +856,12 @@ textarea {
     width: 47.3%;
 }
 
-.tabmenu.formtab .selected a {
-    background-color: #c0392b;
+.submit-page .tabmenu.formtab .selected a {
+    background-color: #c0392b !important;
+    color: white !important;
+    font-weight: bold;
 }
 
-.tabmenu li a {
-    background-color: #ecf0f1;
-
-}
 
 /* CUSTOMIZE SUBREDDIT SIDEBAR CONTENT */
 #search input[type="text"] {
