@@ -450,23 +450,6 @@ textarea {
     visibility: hidden;
 }
 
-
-#header .tabmenu a {
-    background-color: transparent;
-    color: white;
-    padding: 7px 5px 4px 5px;
-    text-transform: uppercase;
-    font-size: 12px;
-
-}
-
-#header .tabmenu {
-    background-color: transparent;
-    font-size: 14px;
-    position: absolute;
-
-}
-
 /* CUSTOMIZE NEW MAIL TOAST MESSAGE */
 #mail,
 #modmail {
@@ -767,8 +750,7 @@ textarea {
     }
 }
 
-
-.tabmenu li a {
+#header .tabmenu li a {
     background-color: transparent !important;
     color: #fff !important;
     display: inline-block;
@@ -778,8 +760,7 @@ textarea {
     padding: 3px;
 }
 
-
-.tabmenu li a::after {
+#header .tabmenu li a::after {
     content: ' ';
     display: block;
     width: 0;
@@ -789,13 +770,12 @@ textarea {
 
 }
 
-.tabmenu li a:hover::after {
+#header .tabmenu li a:hover::after {
     width: 100%;
     transition: width .4s;
 }
 
-
-.tabmenu li.selected a {
+#header .tabmenu li.selected a {
     background-color: transparent;
     border: none;
     border-bottom: 4px solid white;
