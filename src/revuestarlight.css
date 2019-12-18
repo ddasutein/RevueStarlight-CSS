@@ -855,6 +855,12 @@ textarea {
     -moz-box-sizing: border-box;
 }
 
+#search input[type="submit"] {
+    /* Overrides input[type="submit"] styling from above that shouldn't apply to the search button */
+    padding: 0;
+    box-shadow: none;
+}
+
 #searchexpando,
 #moresearchinfo {
     margin-left: 10px;
