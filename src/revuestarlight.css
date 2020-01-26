@@ -1513,6 +1513,10 @@ ul.image-preview-list {
     width: 900px;
 }
 
+.icon-menu a {
+    background: none;
+}
+
 /** Device specific CSS (Media Queries)
 -------------------------------------------------------------------------- **/
 
